@@ -1,0 +1,236 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO   # <- change this
+  branch: main
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: site
+    label: Website
+    files:
+      - name: content
+        label: All website content
+        file: content.json
+        fields:
+          - {label: Logo, name: logo, widget: image, required: false}
+          - {label: Contact email, name: email, widget: string}
+          - label: Front page picture / video
+            name: hero
+            widget: object
+            fields:
+              - {label: Picture, name: img, widget: image, required: false}
+              - {label: "Animate the circuit lines? (off = still, no pause button)", name: motion, widget: boolean, default: true}
+              - {label: "Video file (mp4)", name: video, widget: file, required: false}
+          - label: Social media links
+            name: social
+            widget: list
+            fields: [{label: "Name (LinkedIn, Facebook, X, Instagram, YouTube)", name: n, widget: string}, {label: Link, name: u, widget: string}]
+          - label: Top banner (call for papers)
+            name: banner
+            widget: object
+            fields:
+              - {label: English, name: en, widget: object, fields: [{label: Bold part, name: b, widget: string, required: false}, {label: Text, name: t, widget: string, required: false}]}
+              - {label: Deutsch, name: de, widget: object, fields: [{label: Fett, name: b, widget: string, required: false}, {label: Text, name: t, widget: string, required: false}]}
+          - label: Front page headlines
+            name: slides
+            widget: list
+            fields:
+              - {label: English, name: en, widget: object, fields: &td [{label: Title, name: t, widget: string}, {label: Text, name: d, widget: text, required: false}]}
+              - {label: Deutsch, name: de, widget: object, fields: *td}
+          - label: About us
+            name: about
+            widget: object
+            fields:
+              - {label: English, name: en, widget: object, fields: &ktd [{label: Small label, name: k, widget: string}, {label: Title, name: t, widget: string}, {label: Text, name: d, widget: text}]}
+              - {label: Deutsch, name: de, widget: object, fields: *ktd}
+          - label: Departments
+            name: departments
+            widget: list
+            fields:
+              - {label: "ID (letters, numbers, hyphens only. Never change later)", name: id, widget: string}
+              - {label: Big picture, name: img, widget: image, required: false}
+              - {label: English, name: en, widget: object, fields: &tdb [{label: Name / title, name: t, widget: string}, {label: Short text, name: d, widget: text, required: false}, {label: Full text, name: b, widget: text, required: false}]}
+              - {label: Deutsch, name: de, widget: object, fields: *tdb}
+          - label: Team groups (e.g. Board, Staff, Advisors)
+            name: groups
+            widget: list
+            fields: [{label: ID, name: id, widget: string}, {label: English name, name: en, widget: string}, {label: Deutscher Name, name: de, widget: string}, {label: "Show on front page?", name: home, widget: boolean, default: true}]
+          - label: Team members
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: n, widget: string}
+              - {label: Group ID, name: g, widget: string}
+              - {label: "Leader of department? (shown first)", name: lead, widget: boolean, default: false}
+              - {label: Department IDs they work in, name: dept, widget: list, required: false}
+              - {label: Photo, name: photo, widget: image, required: false}
+              - {label: Email, name: email, widget: string, required: false}
+              - {label: Phone, name: phone, widget: string, required: false}
+              - {label: LinkedIn link, name: linkedin, widget: string, required: false}
+              - {label: English, name: en, widget: object, fields: &rb [{label: Position, name: r, widget: string}, {label: "Biography (new line = new paragraph)", name: b, widget: text, required: false}]}
+              - {label: Deutsch, name: de, widget: object, fields: *rb}
+          - label: Events (conferences, seminars, workshops)
+            name: events
+            widget: list
+            fields:
+              - {label: Date, name: date, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD}
+              - {label: Type, name: type, widget: select, options: [conference, seminar, workshop, webinar, training, other]}
+              - {label: "Link (registration page)", name: link, widget: string, required: false}
+              - {label: Department ID (optional), name: dept, widget: string, required: false}
+              - {label: English, name: en, widget: object, fields: *td}
+              - {label: Deutsch, name: de, widget: object, fields: *td}
+          - label: News, articles and videos
+            name: news
+            widget: list
+            fields:
+              - {label: Date, name: date, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD}
+              - {label: Category, name: cat, widget: select, options: [announcement, news, meeting, research, seminar, press]}
+              - {label: Picture, name: img, widget: image, required: false}
+              - {label: "Video (mp4 file or YouTube link)", name: video, widget: string, required: false}
+              - {label: "Link (PDF report or external page)", name: link, widget: string, required: false}
+              - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
+              - {label: Department ID (optional), name: dept, widget: string, required: false}
+              - {label: English, name: en, widget: object, fields: *tdb}
+              - {label: Deutsch, name: de, widget: object, fields: *tdb}
+          - label: "Training and careers (jobs, courses, applications)"
+            name: careers
+            widget: list
+            fields:
+              - {label: Type, name: type, widget: select, options: [job, training, internship, volunteer, other]}
+              - {label: Deadline (optional), name: deadline, widget: datetime, time_format: false, date_format: YYYY-MM-DD, format: YYYY-MM-DD, required: false}
+              - {label: "Apply: form link OR email (empty = general email)", name: apply, widget: string, required: false}
+              - {label: English, name: en, widget: object, fields: *tdb}
+              - {label: Deutsch, name: de, widget: object, fields: *tdb}
+          - label: "What we do (mission cards)"
+            name: mission
+            widget: object
+            fields: &sec
+              - {label: English, name: en, widget: object, fields: *ktd}
+              - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: Cards
+                name: items
+                widget: list
+                fields: &it
+                  - {label: Picture, name: img, widget: image, required: false}
+                  - {label: Link, name: link, widget: string, required: false}
+                  - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
+                  - {label: English, name: en, widget: object, fields: *td}
+                  - {label: Deutsch, name: de, widget: object, fields: *td}
+          - {label: "Get involved (join, volunteer, support)", name: involve, widget: object, fields: *sec}
+          - label: "Highlights (picture tiles that open a full page)"
+            name: highlights
+            widget: list
+            fields:
+              - {label: Picture, name: img, widget: image}
+              - {label: "Extra link (optional)", name: link, widget: string, required: false}
+              - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
+              - {label: English, name: en, widget: object, fields: *tdb}
+              - {label: Deutsch, name: de, widget: object, fields: *tdb}
+          - label: FAQ
+            name: faq
+            widget: list
+            fields:
+              - {label: English, name: en, widget: object, fields: &qa [{label: Question, name: q, widget: string}, {label: Answer, name: a, widget: text}]}
+              - {label: Deutsch, name: de, widget: object, fields: *qa}
+          - label: Contact details
+            name: contact
+            widget: object
+            fields: [{label: Address, name: address, widget: string, required: false}, {label: Phone, name: phone, widget: string, required: false}]
+          - label: Research projects
+            name: projects
+            widget: list
+            fields:
+              - {label: Picture, name: img, widget: image, required: false}
+              - {label: Status, name: status, widget: select, options: [ongoing, completed, planned]}
+              - {label: Department ID, name: dept, widget: string, required: false}
+              - {label: Partners (text), name: partners, widget: string, required: false}
+              - {label: Extra link (optional), name: link, widget: string, required: false}
+              - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
+              - {label: English, name: en, widget: object, fields: *tdb}
+              - {label: Deutsch, name: de, widget: object, fields: *tdb}
+          - label: Contact persons (General, Press, Partnerships...)
+            name: contacts
+            widget: list
+            fields:
+              - {label: Email, name: email, widget: string, required: false}
+              - {label: Phone, name: phone, widget: string, required: false}
+              - {label: English, name: en, widget: object, fields: *td}
+              - {label: Deutsch, name: de, widget: object, fields: *td}
+          - label: Section titles (menu names and headings)
+            name: sections
+            widget: object
+            fields:
+              - label: "News"
+                name: news
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Events"
+                name: events
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Training & Careers"
+                name: training
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Team"
+                name: team
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Projects"
+                name: projects
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Highlights"
+                name: highlights
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "FAQ"
+                name: faq
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Partners"
+                name: partners
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: "Contact"
+                name: contact
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *ktd}
+                  - {label: Deutsch, name: de, widget: object, fields: *ktd}
+          - label: Partners and supporters (bottom of the page)
+            name: partners
+            widget: list
+            fields: [{label: Name, name: n, widget: string}, {label: Logo, name: logo, widget: image, required: false}, {label: Website link, name: link, widget: string, required: false}]
+          - label: Your own sections (menu + page)
+            name: extra
+            widget: list
+            fields:
+              - {label: "ID (letters only)", name: id, widget: string}
+              - {label: English, name: en, widget: object, fields: *ktd}
+              - {label: Deutsch, name: de, widget: object, fields: *ktd}
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - {label: Picture, name: img, widget: image, required: false}
+                  - {label: "Link (PDF, video, page)", name: link, widget: string, required: false}
+                  - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
+                  - {label: English, name: en, widget: object, fields: *td}
+                  - {label: Deutsch, name: de, widget: object, fields: *td}

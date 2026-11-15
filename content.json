@@ -1,0 +1,1099 @@
+{
+ "logo": "",
+ "email": "info@pulse249.org",
+ "hero": {
+  "img": "",
+  "video": "",
+  "motion": true
+ },
+ "social": [
+  {
+   "n": "LinkedIn",
+   "u": "#"
+  },
+  {
+   "n": "Facebook",
+   "u": "#"
+  },
+  {
+   "n": "X",
+   "u": "#"
+  },
+  {
+   "n": "Instagram",
+   "u": "#"
+  },
+  {
+   "n": "YouTube",
+   "u": "#"
+  }
+ ],
+ "banner": {
+  "en": {
+   "b": "",
+   "t": ""
+  },
+  "de": {
+   "b": "",
+   "t": ""
+  }
+ },
+ "slides": [
+  {
+   "en": {
+    "t": "Engineering the power behind a sustainable future",
+    "d": "An independent technology initiative for power electronics, energy storage and clean energy systems."
+   },
+   "de": {
+    "t": "Die Technik hinter einer nachhaltigen Zukunft",
+    "d": "Eine unabhängige Technologie-Initiative für Leistungselektronik, Energiespeicher und saubere Energiesysteme."
+   }
+  },
+  {
+   "en": {
+    "t": "Connecting Sudanese and German engineers",
+    "d": "A bridge for knowledge, projects and careers between Sudan and Germany."
+   },
+   "de": {
+    "t": "Sudanesische und deutsche Ingenieure vernetzen",
+    "d": "Eine Brücke für Wissen, Projekte und Karrieren zwischen dem Sudan und Deutschland."
+   }
+  },
+  {
+   "en": {
+    "t": "From research to real systems",
+    "d": "High-voltage technology, battery systems, PCB design and micro/nano-electronics."
+   },
+   "de": {
+    "t": "Von der Forschung zum realen System",
+    "d": "Hochspannungstechnik, Batteriesysteme, Leiterplattenentwurf und Mikro-/Nanoelektronik."
+   }
+  },
+  {
+   "en": {
+    "t": "Learn, publish, connect",
+    "d": "Conferences, seminars, workshops, training and job opportunities."
+   },
+   "de": {
+    "t": "Lernen, publizieren, vernetzen",
+    "d": "Konferenzen, Seminare, Workshops, Training und Jobangebote."
+   }
+  }
+ ],
+ "about": {
+  "en": {
+   "k": "About us",
+   "t": "An initiative that connects engineers",
+   "d": "PULSE 249⁴⁹ is an independent technology initiative that links Sudanese and German engineers. We advance power electronics and sustainable energy through research, open knowledge sharing, training and community events."
+  },
+  "de": {
+   "k": "Über uns",
+   "t": "Eine Initiative, die Ingenieure verbindet",
+   "d": "PULSE 249⁴⁹ ist eine unabhängige Technologie-Initiative, die sudanesische und deutsche Ingenieure verbindet. Wir fördern Leistungselektronik und nachhaltige Energie durch Forschung, Wissensaustausch, Training und Veranstaltungen."
+  }
+ },
+ "departments": [
+  {
+   "id": "power-electronics",
+   "img": "",
+   "en": {
+    "t": "Power Electronics",
+    "d": "Converters, inverters, drives and efficient power conversion.",
+    "b": "Write the full description of this department here: goals, projects, labs, publications."
+   },
+   "de": {
+    "t": "Leistungselektronik",
+    "d": "Umrichter, Wechselrichter, Antriebe und effiziente Energiewandlung.",
+    "b": "Hier die ausführliche Beschreibung der Abteilung einfügen."
+   }
+  },
+  {
+   "id": "energy-storage",
+   "img": "",
+   "en": {
+    "t": "Energy Storage Systems",
+    "d": "Grid-scale and distributed storage design and control.",
+    "b": ""
+   },
+   "de": {
+    "t": "Energiespeichersysteme",
+    "d": "Auslegung und Regelung von Netz- und Heimspeichern.",
+    "b": ""
+   }
+  },
+  {
+   "id": "power-systems",
+   "img": "",
+   "en": {
+    "t": "Power Systems",
+    "d": "Grid stability, protection and smart-grid integration.",
+    "b": ""
+   },
+   "de": {
+    "t": "Energiesysteme",
+    "d": "Netzstabilität, Schutz und Smart-Grid-Integration.",
+    "b": ""
+   }
+  },
+  {
+   "id": "high-voltage",
+   "img": "",
+   "en": {
+    "t": "High-Voltage Technology",
+    "d": "Insulation, testing and HVDC technologies.",
+    "b": ""
+   },
+   "de": {
+    "t": "Hochspannungstechnik",
+    "d": "Isolation, Prüfung und HGÜ-Technologien.",
+    "b": ""
+   }
+  },
+  {
+   "id": "pcb-design",
+   "img": "",
+   "en": {
+    "t": "PCB & Circuit Design",
+    "d": "Hardware design, layout, EMC and prototyping.",
+    "b": ""
+   },
+   "de": {
+    "t": "Leiterplatten & Schaltungsentwurf",
+    "d": "Hardwareentwurf, Layout, EMV und Prototypen.",
+    "b": ""
+   }
+  },
+  {
+   "id": "micro-nano",
+   "img": "",
+   "en": {
+    "t": "Micro & Nano-Electronics",
+    "d": "Semiconductor devices and wide-bandgap technology.",
+    "b": ""
+   },
+   "de": {
+    "t": "Mikro- & Nanoelektronik",
+    "d": "Halbleiterbauelemente und Wide-Bandgap-Technologie.",
+    "b": ""
+   }
+  },
+  {
+   "id": "battery-systems",
+   "img": "",
+   "en": {
+    "t": "Battery Systems",
+    "d": "Pack design, BMS, testing and second-life use.",
+    "b": ""
+   },
+   "de": {
+    "t": "Batteriesysteme",
+    "d": "Packdesign, BMS, Test und Second-Life.",
+    "b": ""
+   }
+  },
+  {
+   "id": "renewable-energy",
+   "img": "",
+   "en": {
+    "t": "Renewable Energy",
+    "d": "Solar, wind and their integration into the grid.",
+    "b": ""
+   },
+   "de": {
+    "t": "Erneuerbare Energien",
+    "d": "Solar, Wind und Netzintegration.",
+    "b": ""
+   }
+  }
+ ],
+ "groups": [
+  {
+   "id": "leadership",
+   "en": "Leadership",
+   "de": "Leitung",
+   "home": true
+  },
+  {
+   "id": "board",
+   "en": "Board of Directors",
+   "de": "Vorstand",
+   "home": true
+  },
+  {
+   "id": "staff",
+   "en": "Staff",
+   "de": "Mitarbeitende",
+   "home": false
+  }
+ ],
+ "team": [
+  {
+   "n": "Founder Name",
+   "g": "leadership",
+   "lead": true,
+   "dept": [
+    "power-electronics",
+    "energy-storage"
+   ],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Founder & Executive Director",
+    "b": "Introduce the founder here: who they are and what they do.\nEducation and professional career: universities, companies, research.\nRole at PULSE 249⁴⁹: vision, responsibilities and achievements."
+   },
+   "de": {
+    "r": "Gründer & Geschäftsführer",
+    "b": "Hier den Gründer vorstellen: wer er ist und was er tut.\nAusbildung und beruflicher Werdegang: Universitäten, Unternehmen, Forschung.\nRolle bei PULSE 249⁴⁹: Vision, Aufgaben und Erfolge."
+   }
+  },
+  {
+   "n": "Deputy Name",
+   "g": "leadership",
+   "lead": false,
+   "dept": [
+    "power-systems"
+   ],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Deputy Director",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Stellvertretende Leitung",
+    "b": "Biografie."
+   }
+  },
+  {
+   "n": "Board Member One",
+   "g": "board",
+   "lead": false,
+   "dept": [],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Chair of the Board",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Vorstandsvorsitz",
+    "b": "Biografie."
+   }
+  },
+  {
+   "n": "Board Member Two",
+   "g": "board",
+   "lead": false,
+   "dept": [],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Board Member",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Vorstandsmitglied",
+    "b": "Biografie."
+   }
+  },
+  {
+   "n": "Prof. Example",
+   "g": "staff",
+   "lead": true,
+   "dept": [
+    "power-electronics"
+   ],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Head of Power Electronics",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Leiter Leistungselektronik",
+    "b": "Biografie."
+   }
+  },
+  {
+   "n": "Dr. Example",
+   "g": "staff",
+   "lead": true,
+   "dept": [
+    "battery-systems"
+   ],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Head of Battery Systems",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Leiter Batteriesysteme",
+    "b": "Biografie."
+   }
+  },
+  {
+   "n": "Research Engineer",
+   "g": "staff",
+   "lead": false,
+   "dept": [
+    "power-electronics",
+    "battery-systems"
+   ],
+   "photo": "",
+   "email": "",
+   "phone": "",
+   "linkedin": "",
+   "en": {
+    "r": "Research Engineer",
+    "b": "Biography."
+   },
+   "de": {
+    "r": "Wissenschaftl. Mitarbeiter",
+    "b": "Biografie."
+   }
+  }
+ ],
+ "events": [
+  {
+   "date": "2026-12-10",
+   "type": "webinar",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "Grid integration of solar and storage",
+    "d": "Online, 90 minutes"
+   },
+   "de": {
+    "t": "Netzintegration von Solar und Speicher",
+    "d": "Online, 90 Minuten"
+   }
+  },
+  {
+   "date": "2027-01-20",
+   "type": "seminar",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "Wide-bandgap devices in practice",
+    "d": "Institute auditorium"
+   },
+   "de": {
+    "t": "Wide-Bandgap-Bauelemente in der Praxis",
+    "d": "Institutsauditorium"
+   }
+  },
+  {
+   "date": "2027-02-18",
+   "type": "workshop",
+   "link": "",
+   "dept": "battery-systems",
+   "en": {
+    "t": "Hands-on battery pack assembly and BMS testing",
+    "d": "Battery lab"
+   },
+   "de": {
+    "t": "Praxis: Batteriepack-Montage und BMS-Test",
+    "d": "Batterielabor"
+   }
+  },
+  {
+   "date": "2027-03-25",
+   "type": "conference",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "International Conference on Power Electronics and Sustainable Energy",
+    "d": "Call for papers open"
+   },
+   "de": {
+    "t": "Internationale Konferenz für Leistungselektronik und nachhaltige Energie",
+    "d": "Call for Papers offen"
+   }
+  }
+ ],
+ "news": [
+  {
+   "date": "2026-11-10",
+   "cat": "meeting",
+   "img": "",
+   "video": "",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "Meeting with officials on energy cooperation",
+    "d": "We met representatives to discuss joint energy projects.",
+    "b": "Write the full report of the meeting here."
+   },
+   "de": {
+    "t": "Treffen mit Verantwortlichen zur Energiekooperation",
+    "d": "Wir sprachen mit Vertretern über gemeinsame Energieprojekte.",
+    "b": "Hier den ganzen Bericht zum Treffen schreiben."
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "cat": "announcement",
+   "img": "",
+   "video": "",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "PULSE 249⁴⁹ launches Sudanese–German engineering network",
+    "d": "Engineers from Sudan and Germany join forces.",
+    "b": "Full article text goes here."
+   },
+   "de": {
+    "t": "PULSE 249⁴⁹ startet sudanesisch-deutsches Ingenieurnetzwerk",
+    "d": "Ingenieure aus dem Sudan und Deutschland vernetzen sich.",
+    "b": "Hier steht der ganze Artikel."
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "cat": "seminar",
+   "img": "",
+   "video": "",
+   "link": "",
+   "dept": "power-electronics",
+   "en": {
+    "t": "Seminar: wide-bandgap devices",
+    "d": "A seminar on SiC and GaN power devices.",
+    "b": ""
+   },
+   "de": {
+    "t": "Seminar: Wide-Bandgap-Bauelemente",
+    "d": "Ein Seminar zu SiC- und GaN-Leistungsbauelementen.",
+    "b": ""
+   }
+  },
+  {
+   "date": "2026-10-15",
+   "cat": "research",
+   "img": "",
+   "video": "",
+   "link": "",
+   "dept": "battery-systems",
+   "en": {
+    "t": "New battery systems research line",
+    "d": "Focus on BMS and second-life batteries.",
+    "b": ""
+   },
+   "de": {
+    "t": "Neue Forschungslinie Batteriesysteme",
+    "d": "Schwerpunkt BMS und Second-Life-Batterien.",
+    "b": ""
+   }
+  },
+  {
+   "date": "2026-10-02",
+   "cat": "press",
+   "img": "",
+   "video": "",
+   "link": "",
+   "dept": "",
+   "en": {
+    "t": "Interview with our founder",
+    "d": "Our founder talks about the vision of the initiative.",
+    "b": ""
+   },
+   "de": {
+    "t": "Interview mit unserem Gründer",
+    "d": "Unser Gründer spricht über die Vision der Initiative.",
+    "b": ""
+   }
+  }
+ ],
+ "careers": [
+  {
+   "type": "job",
+   "deadline": "2027-02-28",
+   "apply": "",
+   "en": {
+    "t": "Research engineer – power electronics",
+    "d": "Join our research team.",
+    "b": "Tasks, requirements and how to apply.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Wissenschaftliche Mitarbeit – Leistungselektronik",
+    "d": "Verstärken Sie unser Forschungsteam.",
+    "b": "Aufgaben, Anforderungen und Bewerbung."
+   }
+  },
+  {
+   "type": "training",
+   "deadline": "2027-01-31",
+   "apply": "",
+   "en": {
+    "t": "Course: PCB design fundamentals",
+    "d": "Hands-on training for engineers and students.",
+    "b": "Tasks, requirements and how to apply.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Kurs: Grundlagen Leiterplattenentwurf",
+    "d": "Praktisches Training für Ingenieure und Studierende.",
+    "b": "Aufgaben, Anforderungen und Bewerbung."
+   }
+  },
+  {
+   "type": "volunteer",
+   "deadline": "",
+   "apply": "",
+   "en": {
+    "t": "Mentoring program",
+    "d": "Guide the next generation of engineers.",
+    "b": "Tasks, requirements and how to apply.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Mentoring-Programm",
+    "d": "Begleiten Sie die nächste Ingenieurgeneration.",
+    "b": "Aufgaben, Anforderungen und Bewerbung."
+   }
+  },
+  {
+   "type": "other",
+   "deadline": "",
+   "apply": "",
+   "en": {
+    "t": "Open application",
+    "d": "Not finding a fit? Tell us about yourself.",
+    "b": "Tasks, requirements and how to apply.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Initiativbewerbung",
+    "d": "Nichts Passendes dabei? Stellen Sie sich vor.",
+    "b": "Aufgaben, Anforderungen und Bewerbung."
+   }
+  }
+ ],
+ "extra": [
+  {
+   "id": "publications",
+   "en": {
+    "k": "Publications",
+    "t": "Papers, reports and videos",
+    "d": "Open knowledge from our community."
+   },
+   "de": {
+    "k": "Publikationen",
+    "t": "Aufsätze, Berichte und Videos",
+    "d": "Offenes Wissen aus unserer Community."
+   },
+   "items": [
+    {
+     "img": "",
+     "link": "",
+     "en": {
+      "t": "Research papers",
+      "d": "Add your first paper."
+     },
+     "de": {
+      "t": "Forschungsarbeiten",
+      "d": "Erste Arbeit hinzufügen."
+     }
+    },
+    {
+     "img": "",
+     "link": "",
+     "en": {
+      "t": "Technical reports",
+      "d": "Add a PDF report link."
+     },
+     "de": {
+      "t": "Technische Berichte",
+      "d": "PDF-Link hinzufügen."
+     }
+    }
+   ]
+  }
+ ],
+ "partners": [
+  {
+   "n": "Partner One",
+   "logo": "",
+   "link": ""
+  },
+  {
+   "n": "Partner Two",
+   "logo": "",
+   "link": ""
+  },
+  {
+   "n": "Sponsor Three",
+   "logo": "",
+   "link": ""
+  },
+  {
+   "n": "Supporter Four",
+   "logo": "",
+   "link": ""
+  }
+ ],
+ "mission": {
+  "en": {
+   "k": "What we do",
+   "t": "Our mission and focus",
+   "d": "Three pillars guide everything we do."
+  },
+  "de": {
+   "k": "Was wir tun",
+   "t": "Unsere Mission und unser Fokus",
+   "d": "Drei Säulen leiten unsere Arbeit."
+  },
+  "items": [
+   {
+    "img": "",
+    "link": "",
+    "en": {
+     "t": "Research",
+     "d": "Applied research in power electronics, storage and clean energy."
+    },
+    "de": {
+     "t": "Forschung",
+     "d": "Angewandte Forschung in Leistungselektronik, Speichern und sauberer Energie."
+    }
+   },
+   {
+    "img": "",
+    "link": "",
+    "en": {
+     "t": "Education",
+     "d": "Training, seminars and workshops that build engineering skills."
+    },
+    "de": {
+     "t": "Bildung",
+     "d": "Training, Seminare und Workshops, die Ingenieurkompetenz aufbauen."
+    }
+   },
+   {
+    "img": "",
+    "link": "",
+    "en": {
+     "t": "Community",
+     "d": "A network that connects Sudanese and German engineers."
+    },
+    "de": {
+     "t": "Gemeinschaft",
+     "d": "Ein Netzwerk, das sudanesische und deutsche Ingenieure verbindet."
+    }
+   }
+  ]
+ },
+ "involve": {
+  "en": {
+   "k": "Get involved",
+   "t": "Be part of PULSE 249⁴⁹",
+   "d": "Join, volunteer or support our work."
+  },
+  "de": {
+   "k": "Mitmachen",
+   "t": "Werden Sie Teil von PULSE 249⁴⁹",
+   "d": "Mitglied werden, mitarbeiten oder unsere Arbeit unterstützen."
+  },
+  "items": [
+   {
+    "img": "",
+    "link": "mailto:info@pulse249.org",
+    "en": {
+     "t": "Become a member",
+     "d": "Join the network of engineers and researchers."
+    },
+    "de": {
+     "t": "Mitglied werden",
+     "d": "Treten Sie dem Netzwerk bei."
+    }
+   },
+   {
+    "img": "",
+    "link": "mailto:info@pulse249.org",
+    "en": {
+     "t": "Volunteer and mentor",
+     "d": "Share your experience with the next generation."
+    },
+    "de": {
+     "t": "Mitarbeiten und Mentoring",
+     "d": "Teilen Sie Ihre Erfahrung mit der nächsten Generation."
+    }
+   },
+   {
+    "img": "",
+    "link": "mailto:info@pulse249.org",
+    "en": {
+     "t": "Support us",
+     "d": "Partner with us or sponsor a project."
+    },
+    "de": {
+     "t": "Uns unterstützen",
+     "d": "Werden Sie Partner oder fördern Sie ein Projekt."
+    }
+   }
+  ]
+ },
+ "faq": [
+  {
+   "en": {
+    "q": "What is PULSE 249⁴⁹?",
+    "a": "An independent technology initiative connecting Sudanese and German engineers."
+   },
+   "de": {
+    "q": "Was ist PULSE 249⁴⁹?",
+    "a": "Eine unabhängige Technologie-Initiative, die sudanesische und deutsche Ingenieure verbindet."
+   }
+  },
+  {
+   "en": {
+    "q": "Who can join?",
+    "a": "Engineers, researchers, students and companies."
+   },
+   "de": {
+    "q": "Wer kann mitmachen?",
+    "a": "Ingenieure, Forschende, Studierende und Unternehmen."
+   }
+  },
+  {
+   "en": {
+    "q": "How can I attend events?",
+    "a": "See the Events section and use the registration link of each event."
+   },
+   "de": {
+    "q": "Wie kann ich teilnehmen?",
+    "a": "Siehe Veranstaltungen und nutzen Sie den Anmeldelink der jeweiligen Veranstaltung."
+   }
+  },
+  {
+   "en": {
+    "q": "How can I support the initiative?",
+    "a": "Contact us to become a partner, sponsor or volunteer."
+   },
+   "de": {
+    "q": "Wie kann ich die Initiative unterstützen?",
+    "a": "Kontaktieren Sie uns als Partner, Förderer oder Freiwillige."
+   }
+  },
+  {
+   "en": {
+    "q": "How do I apply for a job or training?",
+    "a": "Open the position in Training & Careers and press Apply."
+   },
+   "de": {
+    "q": "Wie bewerbe ich mich?",
+    "a": "Öffnen Sie die Stelle unter Ausbildung & Karriere und wählen Sie Bewerben."
+   }
+  }
+ ],
+ "contact": {
+  "address": "Street, City, Country",
+  "phone": "+000 000 000 000"
+ },
+ "highlights": [
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Power electronics lab",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Labor Leistungselektronik",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  },
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Battery systems",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Batteriesysteme",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  },
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Renewable energy",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Erneuerbare Energien",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  },
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Training programs",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Trainingsprogramme",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  },
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Sudan–Germany network",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Netzwerk Sudan–Deutschland",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  },
+  {
+   "img": "",
+   "link": "",
+   "en": {
+    "t": "Annual conference",
+    "d": "Short description shown on the picture.",
+    "b": "Full story shown when someone selects this picture: text, results, people, next steps.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Jahreskonferenz",
+    "d": "Kurzbeschreibung auf dem Bild.",
+    "b": "Die ganze Geschichte, die nach dem Klick erscheint.\nEine neue Zeile beginnt einen neuen Absatz."
+   }
+  }
+ ],
+ "projects": [
+  {
+   "img": "",
+   "status": "ongoing",
+   "dept": "power-electronics",
+   "partners": "Partner names",
+   "link": "",
+   "en": {
+    "t": "Hybrid solar-storage converter",
+    "d": "A modular converter for solar plants with storage.",
+    "b": "Describe the project: goals, methods, results, team.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Hybrider Solar-Speicher-Umrichter",
+    "d": "Ein modularer Umrichter für Solaranlagen mit Speicher.",
+    "b": "Projekt beschreiben: Ziele, Methoden, Ergebnisse, Team."
+   }
+  },
+  {
+   "img": "",
+   "status": "ongoing",
+   "dept": "battery-systems",
+   "partners": "Partner names",
+   "link": "",
+   "en": {
+    "t": "Second-life battery pack",
+    "d": "Reusing electric-vehicle batteries for stationary storage.",
+    "b": "Describe the project: goals, methods, results, team.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Second-Life-Batteriepack",
+    "d": "Wiederverwendung von Fahrzeugbatterien als stationärer Speicher.",
+    "b": "Projekt beschreiben: Ziele, Methoden, Ergebnisse, Team."
+   }
+  },
+  {
+   "img": "",
+   "status": "planned",
+   "dept": "power-systems",
+   "partners": "Partner names",
+   "link": "",
+   "en": {
+    "t": "Smart-grid study",
+    "d": "A grid-stability study for a regional network.",
+    "b": "Describe the project: goals, methods, results, team.\nA new line starts a new paragraph."
+   },
+   "de": {
+    "t": "Smart-Grid-Studie",
+    "d": "Eine Netzstabilitätsstudie für ein Regionalnetz.",
+    "b": "Projekt beschreiben: Ziele, Methoden, Ergebnisse, Team."
+   }
+  }
+ ],
+ "contacts": [
+  {
+   "email": "info@pulse249.org",
+   "phone": "",
+   "en": {
+    "t": "General",
+    "d": "Questions about the initiative."
+   },
+   "de": {
+    "t": "Allgemein",
+    "d": "Fragen zur Initiative."
+   }
+  },
+  {
+   "email": "info@pulse249.org",
+   "phone": "",
+   "en": {
+    "t": "Press & media",
+    "d": "Interviews and press material."
+   },
+   "de": {
+    "t": "Presse & Medien",
+    "d": "Interviews und Pressematerial."
+   }
+  },
+  {
+   "email": "info@pulse249.org",
+   "phone": "",
+   "en": {
+    "t": "Partnerships",
+    "d": "Become a partner or sponsor."
+   },
+   "de": {
+    "t": "Partnerschaften",
+    "d": "Partner oder Förderer werden."
+   }
+  },
+  {
+   "email": "info@pulse249.org",
+   "phone": "",
+   "en": {
+    "t": "Careers & training",
+    "d": "Applications and courses."
+   },
+   "de": {
+    "t": "Karriere & Training",
+    "d": "Bewerbungen und Kurse."
+   }
+  }
+ ],
+ "sections": {
+  "news": {
+   "en": {
+    "k": "News",
+    "t": "Latest from the initiative",
+    "d": "Updates, publications, articles and videos."
+   },
+   "de": {
+    "k": "Aktuelles",
+    "t": "Neues aus der Initiative",
+    "d": "Meldungen, Publikationen, Artikel und Videos."
+   }
+  },
+  "events": {
+   "en": {
+    "k": "Events",
+    "t": "Conferences, seminars and workshops",
+    "d": "Open to researchers, industry and students."
+   },
+   "de": {
+    "k": "Veranstaltungen",
+    "t": "Konferenzen, Seminare und Workshops",
+    "d": "Offen für Forschende, Industrie und Studierende."
+   }
+  },
+  "training": {
+   "en": {
+    "k": "Training & Careers",
+    "t": "Grow with us",
+    "d": "Open positions, training courses and applications."
+   },
+   "de": {
+    "k": "Ausbildung & Karriere",
+    "t": "Wachsen Sie mit uns",
+    "d": "Offene Stellen, Trainings und Bewerbungen."
+   }
+  },
+  "team": {
+   "en": {
+    "k": "Team",
+    "t": "The people behind PULSE 249⁴⁹",
+    "d": "Leadership and board."
+   },
+   "de": {
+    "k": "Team",
+    "t": "Die Menschen hinter PULSE 249⁴⁹",
+    "d": "Leitung und Vorstand."
+   }
+  },
+  "projects": {
+   "en": {
+    "k": "Projects",
+    "t": "Research projects",
+    "d": "What we are working on with our partners."
+   },
+   "de": {
+    "k": "Projekte",
+    "t": "Forschungsprojekte",
+    "d": "Woran wir mit unseren Partnern arbeiten."
+   }
+  },
+  "highlights": {
+   "en": {
+    "k": "Highlights",
+    "t": "Discover more",
+    "d": "Select a picture to read the full story."
+   },
+   "de": {
+    "k": "Highlights",
+    "t": "Mehr entdecken",
+    "d": "Wählen Sie ein Bild, um die ganze Geschichte zu lesen."
+   }
+  },
+  "faq": {
+   "en": {
+    "k": "FAQ",
+    "t": "Frequently asked questions",
+    "d": "Quick answers about the initiative."
+   },
+   "de": {
+    "k": "FAQ",
+    "t": "Häufige Fragen",
+    "d": "Kurze Antworten zur Initiative."
+   }
+  },
+  "partners": {
+   "en": {
+    "k": "Partners",
+    "t": "Our partners and supporters",
+    "d": "Organisations and companies that support our work."
+   },
+   "de": {
+    "k": "Partner",
+    "t": "Unsere Partner und Förderer",
+    "d": "Organisationen und Unternehmen, die unsere Arbeit unterstützen."
+   }
+  },
+  "contact": {
+   "en": {
+    "k": "Contact",
+    "t": "Get in touch",
+    "d": "Questions, partnerships, press or applications – write to us."
+   },
+   "de": {
+    "k": "Kontakt",
+    "t": "Kontakt aufnehmen",
+    "d": "Fragen, Partnerschaften, Presse oder Bewerbungen – schreiben Sie uns."
+   }
+  }
+ }
+}
