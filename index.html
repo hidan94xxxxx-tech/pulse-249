@@ -281,6 +281,75 @@ form.msg { background: var(--surface); border: 1px solid var(--line); border-rad
   .card, .btn { transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease; }
   @keyframes fade { from { opacity: 0.35; } to { opacity: 1; } }
 }
+
+/* Motion layer */
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(30rem circle at var(--mx, 72%) var(--my, 30%), rgba(120, 225, 170, 0.13), transparent 62%); }
+.aurora { position: absolute; inset: 0; z-index: -3; overflow: hidden; }
+.aurora i { position: absolute; border-radius: 50%; filter: blur(90px); }
+.aurora i:nth-child(1) { width: 44rem; height: 44rem; right: -8rem; top: -14rem; background: #1fa56a; opacity: 0.42; }
+.aurora i:nth-child(2) { width: 34rem; height: 34rem; left: 22%; bottom: -20rem; background: #c79a1e; opacity: 0.24; }
+.aurora i:nth-child(3) { width: 30rem; height: 30rem; left: -10rem; top: -8rem; background: #0f7a55; opacity: 0.3; }
+.hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 34rem); }
+.hero-side { position: relative; display: grid; justify-items: center; }
+.globe { width: 100%; max-width: 34rem; aspect-ratio: 1; }
+.hero .globe canvas { position: static; width: 100%; height: 100%; z-index: auto; display: block; }
+.hero-side { padding-bottom: 4.5rem; }
+.hero-side .glass { position: absolute; left: -2.5rem; bottom: 0; width: 19.5rem; }
+.glass h2 { font-size: 1.15rem; }
+.stats { background: #0a3324; color: var(--on-dark); position: relative; isolation: isolate; overflow: hidden; }
+.stats::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(24rem circle at var(--mx, 50%) var(--my, 0%), rgba(240, 201, 90, 0.1), transparent 65%); }
+.stats-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; padding-block: 2rem 1.5rem; }
+.stat { display: flex; flex-direction: column; gap: 0.15rem; border-left: 2px solid rgba(240, 201, 90, 0.55); padding-left: 1rem; }
+.stat .num { font-family: var(--font-display); font-size: clamp(2.2rem, 1.5rem + 2.4vw, 3.2rem); line-height: 1; color: #f0c95a; font-variant-numeric: tabular-nums; }
+.stat span:last-child { color: var(--on-dark-muted); font-size: 0.9375rem; }
+.wave svg { display: block; width: 100%; height: 36px; }
+.wave path { fill: none; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+.wave .base { stroke: rgba(170, 236, 200, 0.28); }
+.wave .run { stroke: #f0c95a; stroke-dasharray: 60 940; stroke-dashoffset: 1000; filter: drop-shadow(0 0 5px rgba(240, 201, 90, 0.9)); }
+.foot { position: relative; isolation: isolate; }
+.foot::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(26rem circle at var(--mx, 80%) var(--my, 0%), rgba(120, 225, 170, 0.1), transparent 65%); }
+.card, .tile { position: relative; }
+.card .art { transition: transform 0.5s ease; }
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee .track { display: flex; gap: 1rem; width: max-content; }
+.marquee .partner { min-width: 14rem; }
+
+.js .rv { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.js .rv.in { opacity: 1; transform: none; }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  a.card::after, .tile::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.25s ease; background: radial-gradient(18rem circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.22), transparent 60%); mix-blend-mode: soft-light; }
+  a.card:hover::after, .tile:hover::after { opacity: 1; }
+  .js a.card.rv.in:hover, .js .tile.rv.in:hover, a.card:hover, .tile:hover { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-4px); transition: transform 0.12s ease-out, box-shadow 0.2s ease, border-color 0.2s ease; }
+  a.card:hover .art { transform: scale(1.06); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .aurora i:nth-child(1) { animation: drift1 18s ease-in-out infinite alternate; }
+  .aurora i:nth-child(2) { animation: drift2 22s ease-in-out infinite alternate; }
+  .aurora i:nth-child(3) { animation: drift1 26s ease-in-out infinite alternate-reverse; }
+  .tile .art { animation: kenburns 18s ease-in-out infinite alternate; }
+  .wave .run { animation: trace 7s linear infinite; }
+  .marquee .track { animation: slide 38s linear infinite; }
+  .marquee:hover .track, .marquee:focus-within .track { animation-play-state: paused; }
+  .hero.paused .aurora i { animation-play-state: paused; }
+  @keyframes drift1 { to { transform: translate(-9rem, 7rem) scale(1.15); } }
+  @keyframes drift2 { to { transform: translate(12rem, -6rem) scale(1.2); } }
+  @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12) translate(-2%, -2%); } }
+  @keyframes trace { to { stroke-dashoffset: 0; } }
+  @keyframes slide { to { transform: translateX(-50%); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { -webkit-mask-image: none; mask-image: none; }
+  .marquee .track { flex-wrap: wrap; width: auto; }
+  .marquee .dup { display: none; }
+}
+@media (max-width: 62rem) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .globe { max-width: 24rem; }
+  .hero-side { padding-bottom: 0; }
+  .hero-side .glass { position: static; width: 100%; max-width: 28rem; margin-top: -2.5rem; }
+  .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 </style>
 </head>
 <body>
@@ -308,6 +377,7 @@ form.msg { background: var(--surface); border: 1px solid var(--line); border-rad
 <button class="totop" id="toTop" type="button" hidden>↑</button>
 <noscript><p style="padding:2rem">This website needs JavaScript to show its content.</p></noscript>
 
+<script src="assets/globe-data.js"></script>
 <script>
 "use strict";
 const UI = {
@@ -326,7 +396,7 @@ const UI = {
     formName: "Your name", formEmail: "Your email", formTopic: "Topic", formMsg: "Message", formSend: "Write email",
     formNote: "This opens your email program with the message filled in. You can also write directly to",
     follow: "Follow us", explore: "Explore", contact: "Contact", imprint: "Imprint", privacy: "Privacy", notFound: "This page does not exist.",
-    pause: "Pause", play: "Play", slide: "Headline", tagline: "Sudan – Germany", kick: "Sudan – Germany · Technology initiative", nextEvent: "Next event", allEvents: "All events", theme: "Switch between light and dark", top: "Back to top", join: "Get involved", loadError: "The content could not be loaded. Please try again later."
+    pause: "Pause", play: "Play", slide: "Headline", tagline: "Sudan – Germany", stats: ["Departments", "Research projects", "Upcoming events", "People"], kick: "Sudan – Germany · Technology initiative", nextEvent: "Next event", allEvents: "All events", theme: "Switch between light and dark", top: "Back to top", join: "Get involved", loadError: "The content could not be loaded. Please try again later."
   },
   de: {
     other: "English", menu: "Menü", about: "Über uns", departments: "Abteilungen", deptTitle: "Unsere Arbeitsfelder",
@@ -343,11 +413,11 @@ const UI = {
     formName: "Ihr Name", formEmail: "Ihre E-Mail", formTopic: "Thema", formMsg: "Nachricht", formSend: "E-Mail schreiben",
     formNote: "Damit öffnet sich Ihr E-Mail-Programm mit der ausgefüllten Nachricht. Sie können auch direkt schreiben an",
     follow: "Folgen Sie uns", explore: "Entdecken", contact: "Kontakt", imprint: "Impressum", privacy: "Datenschutz", notFound: "Diese Seite gibt es nicht.",
-    pause: "Pause", play: "Start", slide: "Schlagzeile", tagline: "Sudan – Deutschland", kick: "Sudan – Deutschland · Technologie-Initiative", nextEvent: "Nächste Veranstaltung", allEvents: "Alle Veranstaltungen", theme: "Zwischen hell und dunkel wechseln", top: "Nach oben", join: "Mitmachen", loadError: "Die Inhalte konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
+    pause: "Pause", play: "Start", slide: "Schlagzeile", tagline: "Sudan – Deutschland", stats: ["Abteilungen", "Forschungsprojekte", "Kommende Veranstaltungen", "Personen"], kick: "Sudan – Deutschland · Technologie-Initiative", nextEvent: "Nächste Veranstaltung", allEvents: "Alle Veranstaltungen", theme: "Zwischen hell und dunkel wechseln", top: "Nach oben", join: "Mitmachen", loadError: "Die Inhalte konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
   }
 };
 
-let C = null, lang = "en", routes = {}, heroTimer = null, heroPaused = false, slideIx = 0, circuit = null, heroRun = null;
+let C = null, lang = "en", routes = {}, heroTimer = null, heroPaused = false, slideIx = 0, circuit = null, heroRun = null, globe = null;
 const $ = (s, r = document) => r.querySelector(s);
 const SUP = "⁰¹²³⁴⁵⁶⁷⁸⁹";
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]))
@@ -411,9 +481,8 @@ function renderHome() {
   const nx = upcoming[0];
   const nextCard = nx ? `<aside class="glass" aria-label="${t.nextEvent}"><div class="glass-head"><span>${t.nextEvent}</span><span class="pill">${esc(t.type[nx.type] || nx.type)}</span></div>
     <div class="glass-body"><div class="glass-main">${cal(nx.date)}<div><h2>${esc(T(nx).t)}</h2><p>${esc(T(nx).d)}</p></div></div>
-    ${upcoming.length > 1 ? `<ol class="glass-list">${upcoming.slice(1, 4).map((e) => `<li><span>${fmtDate(e.date, { day: "numeric", month: "short" })}</span><span>${esc(T(e).t)}</span></li>`).join("")}</ol>` : ""}
     <div class="btn-row">${safeUrl(nx.link) ? `<a class="btn sm" href="${attr(safeUrl(nx.link))}"${ext(safeUrl(nx.link))}>${t.register}</a>` : ""}<a class="btn sm ghost on-dark" href="#events">${t.allEvents} →</a></div></div></aside>` : "";
-  parts.push(`<section class="hero" id="start">
+  parts.push(`<section class="hero" id="start"><div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     ${safeUrl(hero.video) ? `<video class="hero-media" src="${attr(safeUrl(hero.video))}" autoplay muted loop playsinline></video>` : safeUrl(hero.img) ? `<img class="hero-media" src="${attr(safeUrl(hero.img))}" alt="">` : `<canvas id="circuit" aria-hidden="true"></canvas>`}
     <div class="wrap hero-grid"><div class="hero-inner">
       <p class="kicker on-dark"><i></i>${t.kick}</p>
@@ -421,7 +490,9 @@ function renderHome() {
       <div class="btn-row"><a class="btn amber" href="#about">${esc(T(C.about).k || t.about)} →</a><a class="btn ghost on-dark" href="#contact">${esc(S("contact").k || t.contact)}</a></div>
       <div class="hero-ctl">${slides.length > 1 ? `<div class="dots" id="dots">${slides.map((_, i) => `<button type="button" aria-label="${t.slide} ${i + 1}" data-i="${i}"></button>`).join("")}</div>` : ""}
       ${hero.motion !== false ? `<button class="pause" id="pause" type="button">${t.pause}</button>` : ""}</div>
-    </div>${nextCard}</div></section>`);
+    </div><div class="hero-side"><div class="globe"><canvas id="globe" aria-hidden="true"></canvas></div>${nextCard}</div></div></section>`);
+  const st = [[(C.departments || []).length, t.stats[0]], [(C.projects || []).length, t.stats[1]], [upcoming.length, t.stats[2]], [(C.team || []).length, t.stats[3]]].filter((x) => x[0] > 0);
+  if (st.length) parts.push(`<div class="stats"><div class="wrap stats-row">${st.map((x) => `<div class="stat"><span class="num" data-n="${x[0]}">${x[0]}</span><span>${x[1]}</span></div>`).join("")}</div>${wave()}</div>`);
 
   const about = T(C.about), mission = C.mission || {}, m = T(mission);
   parts.push(sec("about", `<div class="about"><div class="stack">${head({ k: about.k, t: about.t })}<p class="lead">${esc(about.d)}</p></div>
@@ -463,7 +534,10 @@ function renderHome() {
      <div class="faq" id="faqList">${C.faq.map((f) => `<details class="q"><summary><span>${esc(T(f).q)}</span></summary><p>${esc(T(f).a)}</p></details>`).join("")}</div><p class="empty" id="faqNone" hidden>${t.faqNone}</p>`));
 
   if ((C.partners || []).length) parts.push(sec("partners", head(S("partners")) +
-    `<div class="partners">${C.partners.map((p) => { const inner = safeUrl(p.logo) ? `<img src="${attr(safeUrl(p.logo))}" alt="${attr(p.n)}" loading="lazy">` : esc(p.n); const l = safeUrl(p.link); return l ? `<a class="partner" href="${attr(l)}"${ext(l)}>${inner}</a>` : `<div class="partner">${inner}</div>`; }).join("")}</div>`));
+    (() => { const k = Math.max(1, Math.ceil(8 / C.partners.length));
+      const one = (p, dup) => { const inner = safeUrl(p.logo) ? `<img src="${attr(safeUrl(p.logo))}" alt="${attr(p.n)}" loading="lazy">` : esc(p.n); const l = safeUrl(p.link), x = dup ? ' dup" aria-hidden="true" tabindex="-1' : ""; return l ? `<a class="partner${x}" href="${attr(l)}"${ext(l)}>${inner}</a>` : `<div class="partner${x}">${inner}</div>`; };
+      const half = (all) => Array.from({ length: k }, (_, r) => C.partners.map((p) => one(p, all || r > 0)).join("")).join("");
+      return `<div class="marquee"><div class="track">${half(false)}${half(true)}</div></div>`; })()));
 
   const ct = C.contact || {}, mail = C.email || "";
   parts.push(sec("contact", head(S("contact")) + `<div class="contact">
@@ -479,6 +553,7 @@ function renderHome() {
     </form></div>`));
 
   $("#home").innerHTML = parts.join("");
+  observeReveals($("#home"));
   wireHome();
 }
 
@@ -517,13 +592,15 @@ function showSlide(i) {
   document.querySelectorAll("#dots button").forEach((b, n) => b.setAttribute("aria-current", String(n === slideIx)));
 }
 function startHero() {
-  clearInterval(heroTimer); if (circuit) circuit.stop();
+  clearInterval(heroTimer); if (circuit) circuit.stop(); if (globe) globe.stop();
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const motion = (C.hero || {}).motion !== false;
   showSlide(slideIx);
   const dots = $("#dots"); if (dots) dots.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { showSlide(+b.dataset.i); restart(); } });
   const canvas = $("#circuit"); circuit = canvas ? makeCircuit(canvas) : null;
-  const run = () => { clearInterval(heroTimer); if (!heroPaused && motion && !reduce && (C.slides || []).length > 1) heroTimer = setInterval(() => showSlide(slideIx + 1), 7000); if (circuit) (heroPaused || !motion || reduce) ? circuit.still() : circuit.start(); };
+  const gc = $("#globe"); globe = gc ? makeGlobe(gc) : null;
+  if ("IntersectionObserver" in window && $(".hero")) new IntersectionObserver((en) => { heroOnScreen = en[0].isIntersecting; }).observe($(".hero"));
+  const run = () => { clearInterval(heroTimer); if (!heroPaused && motion && !reduce && (C.slides || []).length > 1) heroTimer = setInterval(() => showSlide(slideIx + 1), 7000); const still = heroPaused || !motion || reduce; if (circuit) still ? circuit.still() : circuit.start(); if (globe) still ? globe.still() : globe.start(); const he = $(".hero"); if (he) he.classList.toggle("paused", still); };
   const restart = () => run();
   heroRun = run;
   const pause = $("#pause");
@@ -554,8 +631,11 @@ function makeCircuit(canvas) {
   function draw(time) {
     ctx.clearRect(0, 0, W, H); ctx.lineWidth = 1.25; ctx.lineJoin = "round";
     for (const tr of traces) {
-      ctx.strokeStyle = "rgba(170,236,200,0.2)"; ctx.beginPath(); tr.pts.forEach((p, k) => k ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke();
-      const end = tr.pts[tr.pts.length - 1]; ctx.fillStyle = "#0f2f21"; ctx.beginPath(); ctx.arc(end[0], end[1], 4, 0, 6.3); ctx.fill(); ctx.stroke();
+      const reveal = time == null ? 1 : Math.min(1, time / 2200), lim = tr.total * reveal;
+      ctx.strokeStyle = "rgba(170,236,200,0.16)"; ctx.beginPath(); ctx.moveTo(tr.pts[0][0], tr.pts[0][1]);
+      for (let k = 1; k < tr.pts.length; k++) { if (tr.cum[k] <= lim) ctx.lineTo(tr.pts[k][0], tr.pts[k][1]); else { const q = at(tr, lim); ctx.lineTo(q[0], q[1]); break; } }
+      ctx.stroke();
+      if (reveal >= 1) { const end = tr.pts[tr.pts.length - 1]; ctx.fillStyle = "#0f2f21"; ctx.beginPath(); ctx.arc(end[0], end[1], 4, 0, 6.3); ctx.fill(); ctx.stroke(); }
       if (time != null) {
         const d = ((time / 1000) * tr.speed + tr.off) % (tr.total + 260);
         if (d < tr.total) { ctx.strokeStyle = "rgba(224,180,64,0.95)"; ctx.lineWidth = 2; ctx.beginPath(); for (let s = 0; s <= 6; s++) { const p = at(tr, Math.max(0, d - s * 5)); s ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); } ctx.stroke(); ctx.lineWidth = 1.25; }
@@ -567,6 +647,89 @@ function makeCircuit(canvas) {
   const onResize = () => { build(); if (!raf) draw(null); };
   addEventListener("resize", onResize); build(); draw(null);
   return api;
+}
+
+/* ---------- Globe: dotted continents, Khartoum–Berlin arc ---------- */
+function makeGlobe(canvas) {
+  const ctx = canvas.getContext("2d"), D = Math.PI / 180, land = window.PULSE_LAND || [];
+  const vec = (lat, lon) => [Math.cos(lat * D) * Math.sin(lon * D), Math.sin(lat * D), Math.cos(lat * D) * Math.cos(lon * D)];
+  const pts = []; for (let i = 0; i < land.length; i += 3) { const v = vec(land[i] / 10, land[i + 1] / 10); v.push(land[i + 2]); pts.push(v); }
+  const A = vec(15.6, 32.5), B = vec(52.5, 13.4), cities = [[A, "Khartoum", 1], [B, "Berlin", -1]];
+  const om = Math.acos(A[0] * B[0] + A[1] * B[1] + A[2] * B[2]), arc = [];
+  for (let k = 0; k <= 60; k++) { const f = k / 60, s1 = Math.sin((1 - f) * om) / Math.sin(om), s2 = Math.sin(f * om) / Math.sin(om), h = 1 + 0.2 * Math.sin(Math.PI * f); arc.push([(A[0] * s1 + B[0] * s2) * h, (A[1] * s1 + B[1] * s2) * h, (A[2] * s1 + B[2] * s2) * h]); }
+  let W = 0, R = 0, c = 0, raf = 0, t0 = 0, last = 0;
+  function size() { const dpr = Math.min(window.devicePixelRatio || 1, 2); W = canvas.clientWidth; canvas.width = canvas.height = Math.round(W * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); R = W * 0.4; c = W / 2; }
+  function draw(t) {
+    const ry = (23 + 30 * Math.sin(t * 0.2)) * D, rx = 9 * D, cy = Math.cos(ry), sy = Math.sin(ry), cx = Math.cos(rx), sx = Math.sin(rx);
+    const rot = (p) => { const x = p[0] * cy - p[2] * sy, z = p[0] * sy + p[2] * cy, y = p[1] * cx - z * sx; return [x, y, p[1] * sx + z * cx]; };
+    const X = (q) => c + q[0] * R, Y = (q) => c - q[1] * R, seen = (q) => q[2] > 0 || q[0] * q[0] + q[1] * q[1] > 1;
+    ctx.clearRect(0, 0, W, W);
+    let g = ctx.createRadialGradient(c, c, R * 0.92, c, c, R * 1.24); g.addColorStop(0, "rgba(80,210,150,0.30)"); g.addColorStop(1, "rgba(80,210,150,0)");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c, c, R * 1.24, 0, 6.3); ctx.fill();
+    g = ctx.createRadialGradient(c - R * 0.4, c - R * 0.45, R * 0.1, c, c, R); g.addColorStop(0, "#1a6b48"); g.addColorStop(0.6, "#0e3b28"); g.addColorStop(1, "#081c13");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c, c, R, 0, 6.3); ctx.fill();
+    ctx.strokeStyle = "rgba(170,236,200,0.28)"; ctx.lineWidth = 1; ctx.stroke();
+    for (const pass of [0, 1]) {
+      ctx.fillStyle = pass ? "#f0c95a" : "#9fe6c2";
+      for (const p of pts) { if (p[3] !== pass) continue; const q = rot(p); if (q[2] <= 0.02) continue; const s = (pass ? 1.5 : 1) + 1.25 * q[2]; ctx.globalAlpha = (pass ? 0.5 : 0.22) + (pass ? 0.5 : 0.6) * q[2]; ctx.fillRect(X(q) - s / 2, Y(q) - s / 2, s, s); }
+    }
+    ctx.globalAlpha = 1;
+    const ra = arc.map(rot);
+    ctx.lineCap = "round"; ctx.shadowColor = "rgba(240,201,90,0.9)"; ctx.shadowBlur = 14; ctx.strokeStyle = "#f0c95a"; ctx.lineWidth = 2.2;
+    for (let k = 1; k < ra.length; k++) { if (!seen(ra[k]) || !seen(ra[k - 1])) continue; ctx.beginPath(); ctx.moveTo(X(ra[k - 1]), Y(ra[k - 1])); ctx.lineTo(X(ra[k]), Y(ra[k])); ctx.stroke(); }
+    for (const off of [0, 0.5]) {
+      const f = (t * 0.22 + off) % 1, pos = (off ? 1 - f : f) * (ra.length - 1), i = Math.floor(pos), fr = pos - i, a = ra[i], b = ra[Math.min(i + 1, ra.length - 1)];
+      const q = [a[0] + (b[0] - a[0]) * fr, a[1] + (b[1] - a[1]) * fr, a[2] + (b[2] - a[2]) * fr];
+      if (seen(q)) { ctx.fillStyle = "#fff6d8"; ctx.shadowBlur = 22; ctx.beginPath(); ctx.arc(X(q), Y(q), 4, 0, 6.3); ctx.fill(); }
+    }
+    ctx.shadowBlur = 0;
+    ctx.font = "600 13px 'Public Sans', system-ui, sans-serif"; ctx.textBaseline = "middle";
+    for (const [v, name, side] of cities) {
+      const q = rot(v); if (q[2] <= 0.05) continue; const x = X(q), y = Y(q), ring = (t * 0.7) % 1;
+      ctx.strokeStyle = `rgba(240,201,90,${1 - ring})`; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(x, y, 5 + 14 * ring, 0, 6.3); ctx.stroke();
+      ctx.fillStyle = "#f0c95a"; ctx.beginPath(); ctx.arc(x, y, 4.5, 0, 6.3); ctx.fill();
+      ctx.fillStyle = "rgba(255,255,255,0.92)"; ctx.textAlign = side > 0 ? "left" : "right"; ctx.fillText(name, x + side * 12, y + (side > 0 ? 12 : -12));
+    }
+  }
+  const loop = (ts) => { if (!t0) t0 = ts; last = (ts - t0) / 1000; if (heroOnScreen && !document.hidden) draw(last); raf = requestAnimationFrame(loop); };
+  const onResize = () => { size(); draw(last); };
+  addEventListener("resize", onResize); size(); draw(0);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (!raf) draw(last); });
+  return { start() { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); }, still() { cancelAnimationFrame(raf); raf = 0; draw(last); }, stop() { cancelAnimationFrame(raf); raf = 0; removeEventListener("resize", onResize); } };
+}
+
+/* ---------- Motion: reveals, counters, tilt, cursor glow, waveform ---------- */
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let heroOnScreen = true, revealIO = null;
+function wave() {
+  let d = "M0 20", x = 0;
+  while (x < 2400) { d += ` H${x + 300} l10 -15 l12 30 l11 -25 l9 14 l8 -4`; x += 350; d += ` H${x + 130} v-11 h28 v11 h18 v-11 h28 v11`; x += 250; }
+  return `<div class="wave" aria-hidden="true"><svg viewBox="0 0 2400 40" preserveAspectRatio="none"><path class="base" d="${d} H2400"/><path class="run" pathLength="1000" d="${d} H2400"/></svg></div>`;
+}
+function countUp(el) {
+  const n = +el.dataset.n || 0; if (REDUCE || !n) return; const t0 = performance.now(), dur = 1300;
+  const step = (now) => { const f = Math.min(1, (now - t0) / dur); el.textContent = Math.round(n * (1 - Math.pow(1 - f, 3))); if (f < 1) requestAnimationFrame(step); };
+  el.textContent = "0"; requestAnimationFrame(step);
+}
+function observeReveals(root) {
+  if (REDUCE || !("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("js");
+  if (!revealIO) revealIO = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (!e.isIntersecting) return; const el = e.target; revealIO.unobserve(el); el.classList.add("in");
+    el.querySelectorAll(".num").forEach(countUp); setTimeout(() => { el.style.transitionDelay = ""; }, 1000);
+  }), { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+  root.querySelectorAll(".sec-head, .card, .tile, .rows > li, .person, .about, details.q, .contact > *, .stat, .marquee, .page-head, .prose, .facts").forEach((el) => {
+    if (el.classList.contains("rv")) return; el.classList.add("rv");
+    const i = el.parentElement ? [...el.parentElement.children].indexOf(el) : 0; el.style.transitionDelay = (i % 6) * 70 + "ms"; revealIO.observe(el);
+  });
+}
+if (matchMedia("(hover: hover)").matches && !REDUCE) {
+  document.addEventListener("pointermove", (e) => {
+    const el = e.target.closest && e.target.closest("a.card, .tile");
+    if (el) { const r = el.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height; el.style.setProperty("--rx", ((0.5 - py) * 7).toFixed(2) + "deg"); el.style.setProperty("--ry", ((px - 0.5) * 9).toFixed(2) + "deg"); el.style.setProperty("--gx", (px * 100).toFixed(1) + "%"); el.style.setProperty("--gy", (py * 100).toFixed(1) + "%"); }
+    const hero = e.target.closest && e.target.closest(".hero, .foot, .stats");
+    if (hero) { const r = hero.getBoundingClientRect(); hero.style.setProperty("--mx", (e.clientX - r.left) + "px"); hero.style.setProperty("--my", (e.clientY - r.top) + "px"); }
+  }, { passive: true });
 }
 
 /* ---------- Detail pages ---------- */
@@ -617,6 +780,7 @@ function renderPage(id) {
     }
   }
   $("#page").innerHTML = html;
+  observeReveals($("#page"));
 }
 
 /* ---------- Frame, routing, start ---------- */
@@ -636,7 +800,7 @@ function renderFrame() {
   $("#cta").textContent = T(C.involve).k || t.join; $("#cta").hidden = !((C.involve || {}).items || []).length;
   const social = (C.social || []).filter((s) => safeUrl(s.u)), legal = C.legal || {};
   const more = [has("highlights") && ["highlights", S("highlights").k], (C.involve || {}).items && ["involve", T(C.involve).k], has("faq") && ["faq", S("faq").k], has("partners") && ["partners", S("partners").k]].filter(Boolean);
-  $("#foot").innerHTML = `<div class="wrap foot-grid">
+  $("#foot").innerHTML = wave() + `<div class="wrap foot-grid">
     <div><span class="brand"><span class="name">PULSE <b>249<sup>49</sup></b></span></span><p>${esc(T(C.about).d)}</p></div>
     <div><h3>${t.explore}</h3><ul>${more.map((i) => `<li><a href="#${i[0]}">${esc(i[1])}</a></li>`).join("")}</ul></div>
     <div><h3>${t.contact}</h3><ul>${C.email ? `<li><a href="mailto:${attr(C.email)}">${esc(C.email)}</a></li>` : ""}${(C.contact || {}).address ? `<li>${esc(C.contact.address)}</li>` : ""}${(C.contact || {}).phone ? `<li>${esc(C.contact.phone)}</li>` : ""}</ul>
@@ -647,7 +811,7 @@ function route() {
   const id = location.hash.slice(1), home = $("#home"), page = $("#page");
   $("#nav").classList.remove("open"); $("#menuBtn").setAttribute("aria-expanded", "false");
   const isPage = id && (routes[id] || id === "team-all" || id === "imprint" || id === "privacy");
-  if (isPage) { renderPage(id); home.hidden = true; page.hidden = false; scrollTo(0, 0); const h = page.querySelector("h1"); if (h) h.focus({ preventScroll: true }); if (circuit) circuit.still(); clearInterval(heroTimer); }
+  if (isPage) { renderPage(id); home.hidden = true; page.hidden = false; scrollTo(0, 0); const h = page.querySelector("h1"); if (h) h.focus({ preventScroll: true }); if (circuit) circuit.still(); if (globe) globe.still(); clearInterval(heroTimer); }
   else { const was = home.hidden; home.hidden = false; page.hidden = true; if (was && heroRun) heroRun(); const el = id && document.getElementById(id); if (el && id !== "start") el.scrollIntoView(); else scrollTo(0, 0); }
 }
 function renderAll() { index(); renderFrame(); renderHome(); route(); }

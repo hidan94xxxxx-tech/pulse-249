@@ -13,6 +13,7 @@ no external fonts or trackers.
 | `admin/index.html`, `admin/config.yml` | The admin panel (Sveltia CMS) at `yourdomain/admin/`. |
 | `uploads/` | Photos, logos, videos and PDFs you upload. |
 | `assets/fonts/` | Fonts, served from your own site. |
+| `assets/globe-data.js` | Map dots for the globe on the front page. |
 
 Keep this folder structure when you upload to GitHub. `admin/index.html` must stay inside
 `admin/`; if it lands in the top folder it replaces the website with the panel.
