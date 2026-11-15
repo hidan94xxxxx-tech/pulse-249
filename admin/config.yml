@@ -234,3 +234,19 @@ collections:
                   - {label: "Upload a PDF or file (optional)", name: file, widget: file, required: false}
                   - {label: English, name: en, widget: object, fields: *td}
                   - {label: Deutsch, name: de, widget: object, fields: *td}
+          - label: "Legal pages (Impressum, Datenschutz)"
+            name: legal
+            widget: object
+            fields:
+              - label: "Imprint / Impressum (empty = no link in the footer)"
+                name: imprint
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: &lg [{label: Title, name: t, widget: string}, {label: "Text (new line = new paragraph)", name: d, widget: text, required: false}]}
+                  - {label: Deutsch, name: de, widget: object, fields: *lg}
+              - label: "Privacy / Datenschutz"
+                name: privacy
+                widget: object
+                fields:
+                  - {label: English, name: en, widget: object, fields: *lg}
+                  - {label: Deutsch, name: de, widget: object, fields: *lg}

@@ -1095,5 +1095,27 @@
     "d": "Fragen, Partnerschaften, Presse oder Bewerbungen – schreiben Sie uns."
    }
   }
+ },
+ "legal": {
+  "imprint": {
+   "en": {
+    "t": "Imprint",
+    "d": ""
+   },
+   "de": {
+    "t": "Impressum",
+    "d": ""
+   }
+  },
+  "privacy": {
+   "en": {
+    "t": "Privacy",
+    "d": "This website sets no cookies and uses no analytics or tracking tools. Fonts are served from this website, not from a third party.\nWhen you open a page, our hosting provider processes technical data such as your IP address and the time of the request in order to deliver the site and keep it secure.\nIf you write to us by email, we use your address and message only to answer you.\nYou have the right to access, rectification and erasure of your data, and you may lodge a complaint with a data protection authority."
+   },
+   "de": {
+    "t": "Datenschutz",
+    "d": "Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. Schriftarten werden von dieser Website selbst ausgeliefert, nicht von Dritten.\nBeim Aufruf einer Seite verarbeitet unser Hosting-Anbieter technische Daten wie Ihre IP-Adresse und den Zeitpunkt der Anfrage, um die Website auszuliefern und abzusichern.\nWenn Sie uns eine E-Mail schreiben, verwenden wir Ihre Adresse und Ihre Nachricht ausschließlich zur Beantwortung.\nSie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten sowie das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren."
+   }
+  }
  }
 }
